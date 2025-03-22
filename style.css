@@ -1,0 +1,725 @@
+/* Подключение шрифта Open Sans через Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Базовые стили для body, чтобы шрифт применялся ко всему сайту */
+body {
+    background-color: lightblue;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Скрываем горизонтальный скролл */
+}
+
+/* Стили для шапки */
+.header {
+  background-color: #003366; /* Синий фон */
+  color: #FFFFFF; /* Белый текст */
+  padding: 20px 0;
+}
+
+/* Контейнер для центрирования и выравнивания элементов */
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 100%; /* Ограничиваем ширину контейнера */
+    width: 1200px; /* Максимальная ширина для десктопов */
+    padding: 0 20px;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Стили для логотипа */
+.logo a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Стили для кнопок контактов */
+.contact-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-button {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #FF0000; /* Красный акцент при наведении */
+}
+
+.contact-button i {
+  font-size: 20px;
+  /* Примечание: замените классы icon-* на реальные иконки, например, из Flaticon */
+}
+
+/* Скрытие чекбокса */
+.menu-toggle {
+  display: none;
+}
+
+/* Скрытие label гамбургер-меню на десктопах */
+.menu-toggle-label {
+  display: none;
+}
+
+/* Стили для навигационного меню */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #FF0000; /* Красный акцент при наведении */
+}
+
+/* Адаптивность для мобильных устройств (ширина до 768px) */
+@media (max-width: 768px) {
+  /* Скрытие кнопок контактов на мобильных */
+  .contact-buttons {
+    display: none;
+  }
+
+  /* Скрытие меню по умолчанию */
+  .menu {
+    display: none;
+  }
+
+  /* Отображение гамбургер-иконки */
+  .menu-toggle-label {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+
+  /* Показ меню при активации чекбокса */
+  #menu-toggle:checked + .menu-toggle-label + .menu {
+    display: block;
+    position: absolute;
+    top: 60px; /* Высота шапки */
+    left: 0;
+    width: 100%;
+    background-color: #003366;
+  }
+
+  /* Вертикальное расположение пунктов меню */
+  .menu ul {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+}
+
+/* Плавная прокрутка для якорных ссылок */
+html {
+  scroll-behavior: smooth;
+}
+.hero {
+    background-color: #FFFFFF;
+    padding: 100px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.hero-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 15px;
+    }
+    .hero-title {
+        font-size: 24px;
+    }
+    .hero-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Стили для раздела "О нас" */
+.about-us {
+    background-color: #FFFFFF; /* Белый фон */
+    padding: 50px 20px; /* Отступы: 50px сверху и снизу, 20px слева и справа */
+    text-align: center; /* Выравнивание по центру */
+    width: 100%; /* Занимает всю ширину экрана */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.about-us-title {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 24px; /* Размер шрифта для десктопов */
+    font-weight: 700; /* Жирный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.about-us-text {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.about-us-image {
+    max-width: 100%; /* Адаптивная ширина изображения */
+    height: auto; /* Сохранение пропорций */
+    margin-top: 30px; /* Отступ сверху */
+    display: block; /* Для центрирования */
+    margin-left: auto; /* Центрирование по горизонтали */
+    margin-right: auto; /* Центрирование по горизонтали */
+}
+
+/* Стили для раздела "Услуги" */
+.services {
+    background-color: #FFFFFF; /* Белый фон */
+    padding: 50px 20px; /* Отступы: 50px сверху и снизу, 20px слева и справа */
+    text-align: center; /* Выравнивание по центру */
+    width: 100%; /* Занимает всю ширину экрана */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.services-title {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 24px; /* Размер шрифта для десктопов */
+    font-weight: 700; /* Жирный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.services-text {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.services-list {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем внутренние отступы */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.services-list li {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 10px; /* Отступ между пунктами */
+    text-align: left; /* Выравнивание текста слева */
+    max-width: 600px; /* Ограничиваем ширину списка для читаемости */
+    margin-left: auto; /* Центрируем список */
+    margin-right: auto; /* Центрируем список */
+}
+
+.services-list i {
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    /* Примечание: замените класс icon-service на реальные иконки, например, из Flaticon */
+}
+
+.services-image {
+    max-width: 100%; /* Адаптивная ширина изображения */
+    height: auto; /* Сохранение пропорций */
+    margin-top: 30px; /* Отступ сверху */
+    display: block; /* Для центрирования */
+    margin-left: auto; /* Центрирование по горизонтали */
+    margin-right: auto; /* Центрирование по горизонтали */
+}
+
+.benefits {
+    background-color: #FFFFFF; /* Белый фон */
+    padding: 50px 20px; /* Отступы: 50px сверху и снизу, 20px слева и справа */
+    text-align: center; /* Выравнивание по центру */
+    width: 100%; /* Занимает всю ширину экрана */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.benefits-title {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 24px; /* Размер шрифта для десктопов */
+    font-weight: 700; /* Жирный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.benefits-text {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.benefits-list {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем внутренние отступы */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.benefits-list li {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 10px; /* Отступ между пунктами */
+    text-align: left; /* Выравнивание текста слева */
+    max-width: 600px; /* Ограничиваем ширину списка для читаемости */
+    margin-left: auto; /* Центрируем список */
+    margin-right: auto; /* Центрируем список */
+}
+
+.benefits-list i {
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    /* Примечание: замените класс icon-benefit на реальные иконки, например, из Flaticon */
+}
+
+.benefits-testimonial {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 14px; /* Размер шрифта для десктопов */
+    font-style: italic; /* Курсив */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.benefits-image {
+    max-width: 100%; /* Адаптивная ширина изображения */
+    height: auto; /* Сохранение пропорций */
+    margin-top: 30px; /* Отступ сверху */
+    display: block; /* Для центрирования */
+    margin-left: auto; /* Центрирование по горизонтали */
+    margin-right: auto; /* Центрирование по горизонтали */
+}
+
+/* Стили для раздела "Как это работает" */
+.how-it-works {
+    background-color: #FFFFFF; /* Белый фон */
+    padding: 50px 20px; /* Отступы: 50px сверху и снизу, 20px слева и справа */
+    text-align: center; /* Выравнивание по центру */
+    width: 100%; /* Занимает всю ширину экрана */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.how-it-works-title {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 24px; /* Размер шрифта для десктопов */
+    font-weight: 700; /* Жирный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.how-it-works-text {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.steps-list {
+    list-style: none; /* Убираем стандартные маркеры */
+    counter-reset: step-counter; /* Инициализируем счётчик для нумерации */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Flexbox для расположения шагов в линию */
+    justify-content: center; /* Центрируем шаги */
+    gap: 20px; /* Отступ между шагами */
+    flex-wrap: wrap; /* Перенос на новую строку, если не помещаются */
+}
+
+.steps-list li {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    display: flex; /* Flexbox для выравнивания иконки и текста */
+    align-items: center; /* Вертикальное центрирование */
+    gap: 10px; /* Отступ между иконкой и текстом */
+    counter-increment: step-counter; /* Увеличиваем счётчик */
+    position: relative; /* Для добавления номера шага */
+    padding-left: 40px; /* Отступ для номера и иконки */
+    text-align: left; /* Выравнивание текста слева */
+    max-width: 300px; /* Ограничиваем ширину шага для читаемости */
+}
+
+.steps-list li::before {
+    content: counter(step-counter); /* Добавляем номер шага */
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #003366; /* Синий фон для номера */
+    color: #FFFFFF; /* Белый текст номера */
+    border-radius: 50%; /* Круглая форма */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.steps-list i {
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    /* Примечание: замените класс icon-step на реальные иконки, например, из Flaticon */
+}
+
+.gallery {
+    background-color: #FFFFFF; /* Белый фон */
+    padding: 50px 20px; /* Отступы: 50px сверху и снизу, 20px слева и справа */
+    text-align: center; /* Выравнивание по центру */
+    width: 100%; /* Занимает всю ширину экрана */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.gallery-title {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 24px; /* Размер шрифта для десктопов */
+    font-weight: 700; /* Жирный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.gallery-text {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 16px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #003366; /* Синий цвет */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.gallery-grid {
+    display: grid; /* Используем CSS Grid для сетки */
+    grid-template-columns: repeat(2, 1fr); /* 2 столбца */
+    gap: 10px; /* Отступ между изображениями */
+    max-width: 620px; /* Максимальная ширина сетки (300px * 2 + 10px отступ) */
+    margin: 0 auto 30px; /* Центрируем и добавляем отступ снизу */
+}
+
+.gallery-grid img {
+    max-width: 100%; /* Адаптивная ширина изображения */
+    height: auto; /* Сохранение пропорций */
+    display: block; /* Убираем лишние отступы */
+}
+
+.gallery-video {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 14px; /* Размер шрифта для десктопов */
+    font-style: italic; /* Курсив */
+    color: #003366; /* Синий цвет */
+}
+
+.contact {
+    background-color: #FFFFFF;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #003366;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form .button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-info p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #003366;
+    margin: 5px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.icon-telegram,
+.icon-whatsapp,
+.icon-viber,
+.icon-instagram {
+    /* Заполнитель для иконки, заменить на реальную иконку из Flaticon */
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #003366;
+    border-radius: 50%;
+}
+
+.icon-telegram {
+    background-image: url('telegram.png'); /* Путь к иконке Telegram */
+}
+
+.icon-whatsapp {
+    background-image: url('whatsapp.png'); /* Путь к иконке WhatsApp */
+}
+
+.icon-viber {
+    background-image: url('viber.png'); /* Путь к иконке Viber */
+}
+
+.icon-instagram {
+    background-image: url('C:\Users\death\OneDrive\Desktop\instagram.png'); /* Путь к иконке Instagram */
+}
+
+.social-links a:hover .icon-telegram,
+.social-links a:hover .icon-whatsapp,
+.social-links a:hover .icon-viber,
+.social-links a:hover .icon-instagram {
+    opacity: 0.7; /* Уменьшаем прозрачность при наведении */
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: #1C2526; /* Тёмно-синий фон, как у шапки */
+    padding: 20px 20px; /* Отступы: 20px сверху и снизу, 20px слева и справа */
+    text-align: center; /* Выравнивание по центру */
+    width: 100%; /* Занимает всю ширину экрана */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.footer-text {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 14px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #FFFFFF; /* Белый цвет */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.footer-links {
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.footer-links a {
+    font-family: 'Open Sans', sans-serif; /* Шрифт Open Sans */
+    font-size: 14px; /* Размер шрифта для десктопов */
+    font-weight: 400; /* Обычный вес */
+    color: #FFFFFF; /* Белый цвет */
+    text-decoration: none; /* Убираем подчёркивание */
+    margin: 0 10px; /* Отступы слева и справа */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Подчёркивание при наведении */
+}
+
+.social-links {
+    display: flex; /* Flexbox для горизонтального расположения */
+    justify-content: center; /* Центрируем иконки */
+    gap: 10px; /* Отступ между иконками */
+}
+
+.social-links a {
+    display: inline-block; /* Для корректного отображения иконок */
+    text-decoration: none; /* Убираем подчёркивание ссылок */
+}
+
+.icon-telegram,
+.icon-whatsapp,
+.icon-viber,
+.icon-instagram {
+    display: inline-block;
+    width: 24px; /* Размер иконки */
+    height: 24px; /* Размер иконки */
+    background-size: cover; /* Масштабируем изображение */
+    background-position: center; /* Центрируем изображение */
+    transition: opacity 0.3s ease; /* Плавное изменение прозрачности при наведении */
+}
+
+.icon-telegram {
+    background-image: url('telegram.png'); /* Путь к иконке Telegram */
+}
+
+.icon-whatsapp {
+    background-image: url('whatsapp.png'); /* Путь к иконке WhatsApp */
+}
+
+.icon-viber {
+    background-image: url('viber.png'); /* Путь к иконке Viber */
+}
+
+.icon-instagram {
+    background-image: url('C:\Users\death\OneDrive\Desktop\instagram.png'); /* Путь к иконке Instagram */
+}
+
+.social-links a:hover .icon-telegram,
+.social-links a:hover .icon-whatsapp,
+.social-links a:hover .icon-viber,
+.social-links a:hover .icon-instagram {
+    opacity: 0.7; /* Уменьшаем прозрачность при наведении */
+}
+
+/* Адаптивность для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* На мобильных устройствах контейнер занимает всю ширину */
+        padding: 0 15px;
+    }
+    .about-us {
+        padding: 30px 15px; /* Уменьшенные отступы */
+    }
+    .about-us-title {
+        font-size: 20px; /* Уменьшенный размер шрифта */
+    }
+    .about-us-text {
+        font-size: 14px; /* Уменьшенный размер шрифта */
+    }
+    .services {
+        padding: 30px 15px; /* Уменьшенные отступы */
+    }
+    .services-title {
+        font-size: 20px; /* Уменьшенный размер шрифта */
+    }
+    .services-text, .services-list li {
+        font-size: 14px; /* Уменьшенный размер шрифта */
+    }
+    .benefits {
+        padding: 30px 15px; /* Уменьшенные отступы */
+    }
+    .benefits-title {
+        font-size: 20px; /* Уменьшенный размер шрифта */
+    }
+    .benefits-text, .benefits-list li {
+        font-size: 14px; /* Уменьшенный размер шрифта */
+    }
+    .benefits-testimonial {
+        font-size: 12px; /* Уменьшенный размер шрифта для отзывов */
+    }
+    .how-it-works {
+        padding: 30px 15px; /* Уменьшенные отступы */
+    }
+    .how-it-works-title {
+        font-size: 20px; /* Уменьшенный размер шрифта */
+    }
+    .how-it-works-text, .steps-list li {
+        font-size: 14px; /* Уменьшенный размер шрифта */
+    }
+    .steps-list {
+        flex-direction: column; /* Шаги в столбец */
+        gap: 15px; /* Уменьшенный отступ между шагами */
+    }
+    .steps-list li {
+        max-width: 100%; /* Полная ширина на мобильных */
+    }
+
+    .gallery {
+        padding: 30px 15px; /* Уменьшенные отступы */
+    }
+    .gallery-title {
+        font-size: 20px; /* Уменьшенный размер шрифта */
+    }
+    .gallery-text {
+        font-size: 14px; /* Уменьшенный размер шрифта */
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 столбец на мобильных */
+    }
+    .gallery-video {
+        font-size: 12px; /* Уменьшенный размер шрифта */
+    }
+    .contact {
+        padding: 30px 15px;
+    }
+    .contact-title {
+        font-size: 20px;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-info p {
+        font-size: 14px;
+    }
+    .footer {
+        padding: 15px 15px; /* Уменьшенные отступы */
+    }
+    .footer-text, .footer-links a {
+        font-size: 12px; /* Уменьшенный размер шрифта */
+    }
+}
